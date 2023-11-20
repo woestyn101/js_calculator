@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/reset.css" />
+    <link rel="stylesheet" href="assets/style.css" />
+    <link rel="stylesheet" href="" />
+    <style type="text/css">
+      .operation {
+        width: 100px;
+        height: 100px;
+        font-size: 40px;
+        margin-right: 10px;
+        margin-left: 15px;
+        border-radius: 10%;
+      }
+
+      #add {
+        background-color: lightblue;
+      }
+      #subtract {
+        background-color: red;
+      }
+
+      #multiply {
+        background-color: green;
+      }
+
+      #divide {
+        background-color: yellow;
+      }
+
+      .inputUser {
+        font-size: 40px;
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Number 1: <input class="inputUser" type="text" id="input1" /> Number 2:
+      <input class="inputUser" type="text" id="input2" />
+    </p>
+    <p>
+      <button class="operation" id="add">+</button
+      ><button class="operation" id="subtract">-</button
+      ><button class="operation" id="multiply">*</button
+      ><button class="operation" id="divide">/</button>
+    </p>
+    <p>The answer: <input class="inputUser" type="text" id="theAnswer" /></p>
+
+    <script type="text/javascript">
+      document.getElementById("add").onclick = function () {
+        var num1 = document.getElementById("input1").value;
+        var num2 = document.getElementById("input2").value;
+
+        //var answer = Number(num1) + Number(num2);
+        // var answer = Math.floor(num1) + Math.floor(num2);
+        //var answer = Math.round(num1) + Math.round(num2);
+        var answer = parseInt(num1, 10) + parseInt(num2, 10);
+        document.getElementById("theAnswer").value = answer;
+        //alert(answer)
+      };
+
+      document.getElementById("subtract").onclick = function () {
+        var num1 = document.getElementById("input1").value;
+        var num2 = document.getElementById("input2").value;
+        //var answer = Number(num1) + Number(num2);
+        // var answer = Math.floor(num1) + Math.floor(num2);
+        //var answer = Math.round(num1) + Math.round(num2);
+        var answer = parseInt(num1, 10) - parseInt(num2, 10);
+        document.getElementById("theAnswer").value = answer;
+        // alert(answer)
+      };
+
+      document.getElementById("multiply").onclick = function () {
+        var num1 = document.getElementById("input1").value;
+        var num2 = document.getElementById("input2").value;
+        //var answer = Number(num1) + Number(num2);
+        // var answer = Math.floor(num1) + Math.floor(num2);
+        //var answer = Math.round(num1) + Math.round(num2);
+        var answer = parseInt(num1, 10) * parseInt(num2, 10);
+        document.getElementById("theAnswer").value = answer;
+        //  alert(answer)
+      };
+
+      document.getElementById("divide").onclick = function () {
+        var num1 = document.getElementById("input1").value;
+        var num2 = document.getElementById("input2").value;
+        //var answer = Number(num1) + Number(num2);
+        // var answer = Math.floor(num1) + Math.floor(num2);
+        //var answer = Math.round(num1) / Math.round(num2);
+        var answer = parseInt(num1, 10) / parseInt(num2, 10);
+        document.getElementById("theAnswer").value = answer;
+        // alert(answer)
+      };
+    </script>
+  </body>
+</html>
