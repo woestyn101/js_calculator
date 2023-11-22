@@ -23,7 +23,7 @@ main {
         display: flex;
         flex-wrap: wrap;
         background-color: #87ceeb ;
-        width:40%;
+        width:60%;
        justify-content: center;  
        padding: 30px;
           
@@ -115,4 +115,4 @@ main {
     } */
 
 
-    }
+    
